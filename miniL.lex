@@ -51,6 +51,14 @@ DIGIT    [0-9]
 "/" {printf("DIV\n"); currPos += yyleng;}
 "%" {printf("MOD\n"); currPos += yyleng;}
 
+/* COMPARISON OPERATORS */
+"==" {printf("EQ\n"); currPos += yyleng;}
+"<>" {printf("NEQ\n"); currPos += yyleng;}
+"<" {printf("LT\n"); currPos += yyleng;}
+">" {printf("GT\n"); currPos += yyleng;}
+"<=" {printf("LTE\n"); currPos += yyleng;}
+">=" {printf("GTE\n"); currPos += yyleng;}
+
 /* NUMBERS AND IDENTIFIERS */
 {DIGIT}+    {printf("NUMBER %s\n", yytext); currPos += yyleng;}
 {LETTERS}(_?({LETTERS}|{DIGIT}))*  {printf("IDENT %s\n", yytext); currPos += yyleng;}

@@ -44,6 +44,13 @@ DIGIT    [0-9]
 "false" {printf("FALSE\n"); currPos += yyleng;}
 "return" {printf("RETURN\n"); currPos += yyleng;}
 
+/* ARITHMETIC OPERATORS */
+"-" {printf("SUB\n"); currPos += yyleng;}
+"+" {printf("ADD\n"); currPos += yyleng;}
+"*" {printf("MULT\n"); currPos += yyleng;}
+"/" {printf("DIV\n"); currPos += yyleng;}
+"%" {printf("MOD\n"); currPos += yyleng;}
+
 /* NUMBERS AND IDENTIFIERS */
 {DIGIT}+    {printf("NUMBER %s\n", yytext); currPos += yyleng;}
 {LETTERS}(_?({LETTERS}|{DIGIT}))*  {printf("IDENT %s\n", yytext); currPos += yyleng;}

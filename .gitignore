@@ -2,3 +2,5 @@ fibonacci.tokens
 miniL
 miniL-lex.c
 miniL-lex.o
+primes.tokens
+mytest.tokens

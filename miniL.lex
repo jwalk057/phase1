@@ -1,4 +1,6 @@
    /* cs152-miniL phase1 */
+   /* Jeremy Walker */
+   /* 862220488 */
    
 %{   
    /* write your C code here for definitions of variables and including headers */

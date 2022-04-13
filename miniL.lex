@@ -8,11 +8,14 @@
    /* some common rules */
 LETTERS  [A-Za-z]
 DIGIT    [0-9]
+COMMENT  "##"
 
 %%
    /* specific lexer rules in regex */
 
-[ \t]+         {currPos += yyleng;}/*Ignores single spaces*/
+[ \t]+         {currPos += yyleng;} /* Ignores single spaces */
+{COMMENT}.*    {} /* Ignores anything proceeding ## (comments) */
+
    /* RESERVED WORDS */
 "function"  {printf("FUNCTION\n"); currPos += yyleng;} 
 "beginparams" {printf("BEGIN_PARAMS\n"); currPos += yyleng;}
